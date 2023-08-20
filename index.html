@@ -65,7 +65,7 @@
                     <h2 class="text-4xl font-semibold my-10 text-center lg:text-left">Kitchenware</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         <!-- product-1 -->
-                        <div class="card bg-base-100 shadow-xl w-full">
+                        <div onclick="selectItemByClick(this)" class="card bg-base-100 shadow-xl w-full">
                             <figure class="px-10 pt-10">
                                 <div class="w-[300px] h-[200px] bg-bg-color flex items-center justify-center">
                                     <img src="./images/prod1.png" alt="Kitchenware"
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <!-- product-2 -->
-                        <div class="card w-full bg-base-100 shadow-xl">
+                        <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <div class="w-[300px] h-[200px] bg-bg-color flex items-center justify-center">
                                     <img src="./images/prod2.png" alt="Kitchenware"
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <!-- product-3 -->
-                        <div class="card w-full bg-base-100 shadow-xl">
+                        <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <div class="w-[300px] h-[200px] bg-bg-color flex items-center justify-center">
                                     <img src="./images/prod3.png" alt="Kitchenware"
@@ -134,7 +134,7 @@
                     <h2 class="text-4xl font-semibold my-10 text-center lg:text-left">Sportswear</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         <!-- product-4 -->
-                        <div class="card w-full bg-base-100 shadow-xl">
+                        <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <div class="w-[300px] h-[200px] bg-bg-color flex items-center justify-center">
                                     <img src="./images/prod4.png" alt="Kitchenware"
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                         <!-- product-5 -->
-                        <div class="card w-full bg-base-100 shadow-xl">
+                        <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <div class="w-[300px] h-[200px] bg-bg-color flex items-center justify-center">
                                     <img src="./images/prod5.png" alt="Kitchenware"
@@ -176,7 +176,7 @@
                             </div>
                         </div>
                         <!-- product-6 -->
-                        <div class="card w-full bg-base-100 shadow-xl">
+                        <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <div class="w-[300px] h-[200px] bg-bg-color flex items-center justify-center">
                                     <img src="./images/prod6.png" alt="Kitchenware"
@@ -203,7 +203,7 @@
                     <h2 class="text-4xl font-semibold my-10 text-center lg:text-left">Furniture</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         <!-- product-7 -->
-                        <div class="card w-full bg-base-100 shadow-xl">
+                        <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <div class="w-[300px] h-[200px] bg-bg-color flex items-center justify-center">
                                     <img src="./images/prod7.png" alt="Kitchenware"
@@ -224,7 +224,7 @@
                             </div>
                         </div>
                         <!-- product-8 -->
-                        <div class="card w-full bg-base-100 shadow-xl">
+                        <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <div class="w-[300px] h-[200px] bg-bg-color flex items-center justify-center">
                                     <img src="./images/prod8.png" alt="Kitchenware"
@@ -245,7 +245,7 @@
                             </div>
                         </div>
                         <!-- product-9 -->
-                        <div class="card w-full bg-base-100 shadow-xl">
+                        <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <div class="w-[300px] h-[200px] bg-bg-color flex items-center justify-center">
                                     <img src="./images/prod9.png" alt="Kitchenware"
@@ -277,13 +277,12 @@
                     </div>
                 </div>
                 <div class="bg-white p-5 mt-10 rounded-lg">
-                    <div class="border-b-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, natus. Eum eaque ea obcaecati quasi? Quibusdam laborum odio aliquam, odit alias facere aperiam nemo quam, a, praesentium soluta necessitatibus est.
+                    <div id="selected-items" class="border-b-2">
                     </div>
                     <div class="border-b-2 my-5">
-                        <h6 class="font-semibold text-xl">Total Price :</h6>
-                        <h6 class="font-semibold text-xl">Discount :</h6>
-                        <h6 class="font-semibold text-xl">Total :</h6>
+                        <h6 class="font-semibold text-xl">Total Price: <span id="total-price" class="text-gray-400"></span> <span class="text-gray-400">TK</span></h6>
+                        <h6 class="font-semibold text-xl">Discount: <span id="discount"></span> <span class="text-gray-400">TK</span></h6>
+                        <h6 class="font-semibold text-xl">Total: <span id="total"></span> <span class="text-gray-400">TK</span></h6>
                     </div>
                     <button class="w-full btn btn-primary border-none text-white bg-common py-2">Make Purchase</button>
                 </div>
