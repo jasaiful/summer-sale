@@ -1,7 +1,13 @@
 
 let total = 0;
 
-function selectItemByClick(target){
+let purchaseButton = document.getElementById('purchase-btn');
+purchaseButton.disabled = true;
+
+let applyButton = document.getElementById('apply-btn');
+applyButton.disabled = true;
+
+function selectItemByClick(target) {
 
     const itemName = target.childNodes[3].childNodes[3].innerText;
     const selectedItemsContainer = document.getElementById('selected-items');
@@ -12,7 +18,7 @@ function selectItemByClick(target){
     p.classList.add('text-lg');
     p.innerHTML = `${count + 1}. ${itemName}`;
     selectedItemsContainer.appendChild(p);
-    
+
 
     const priceText = target.childNodes[3].childNodes[5].innerText.split(" ")[0];
     const price = parseFloat(priceText);
@@ -20,11 +26,20 @@ function selectItemByClick(target){
     const totalPurchase = total.toFixed(2);
     document.getElementById('total-price').innerText = totalPurchase;
 
-    console.log(totalPurchase);
+ 
 
-    function buttonStyle(){
-        const applyButton = document.getElementById('');
+    // purchase button
+    if (total > 0) {
+        purchaseButton.disabled = false;
+    } 
+    
+    // apply button
+    if (total >= 200){
+        applyButton.disabled = false;
     }
+
+
+    // console.log(purchaseButton, "Hello");
 
 
 }

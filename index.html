@@ -41,7 +41,7 @@
 <body class="work-sans bg-bg-color">
     <header class="bg-yellow-50 max-w-full">
         <!-- banner section -->
-        <div class="hero min-h-screen">
+        <div class="hero min-h-min">
             <div class="hero-content flex-col gap-10 lg:flex-row-reverse w-10/12 justify-around">
                 <img src="./images/Summer 1.png" class="max-w-sm rounded-lg" />
                 <div class="text-center">
@@ -272,28 +272,41 @@
                 <div class="bg-white mt-28 rounded-lg p-5">
                     <h6 class="font-semibold text-xl">Have coupon?</h6>
                     <div class="join">
-                        <input class="input join-item border border-gray-200" placeholder="Coupon code" />
-                        <button class="btn join-item rounded-xl text-white bg-common ">Apply</button>
+                        <input id="coupon-field" class="input join-item border border-gray-200" placeholder="Coupon code" />
+                        <button id="apply-btn" class="btn join-item rounded-xl text-white bg-common ">Apply</button>
                     </div>
                 </div>
                 <div class="bg-white p-5 mt-10 rounded-lg">
                     <div id="selected-items" class="border-b-2">
                     </div>
                     <div class="border-b-2 my-5">
-                        <h6 class="font-semibold text-xl">Total Price: <span id="total-price" class="text-gray-400"></span> <span class="text-gray-400">TK</span></h6>
-                        <h6 class="font-semibold text-xl">Discount: <span id="discount"></span> <span class="text-gray-400">TK</span></h6>
-                        <h6 class="font-semibold text-xl">Total: <span id="total"></span> <span class="text-gray-400">TK</span></h6>
+                        <h6 class="font-semibold text-xl">Total Price: <span id="total-price"
+                                class="text-gray-400"></span> <span class="text-gray-400">TK</span></h6>
+                        <h6 class="font-semibold text-xl">Discount: <span id="discount"></span> <span
+                                class="text-gray-400">TK</span></h6>
+                        <h6 class="font-semibold text-xl">Total: <span id="total"></span> <span
+                                class="text-gray-400">TK</span></h6>
                     </div>
-                    <button class="w-full btn btn-primary border-none text-white bg-common py-2">Make Purchase</button>
+                    <button onclick="my_modal_5.showModal()" id="purchase-btn"
+                        class="w-full btn btn-primary border-none text-white bg-common py-2">Make
+                        Purchase</button>
+                    <!-- Open the modal -->
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                        <form method="dialog" class="modal-box">
+                            <div class="">
+                                <img class="mx-auto" src="./images/congo.png" alt="">
+                                <h2 class="font-bold text-black text-4xl text-center">Congratulations</h2>
+                                <p class="py-4 px-auto text-center">Your purchase is successfully done</p>
+                            </div>
+                            <div class="modal-action">
+                                <button id="modal-btn" class="mx-auto px-14 btn btn-primary border-none text-white bg-common py-2">Go Home</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </div>
             </div>
         </div>
     </main>
-
-    <footer>
-
-    </footer>
     <script src="scripts/item-cart.js"></script>
 </body>
-
 </html>
