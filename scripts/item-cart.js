@@ -72,5 +72,5 @@ document.getElementById('apply-btn').addEventListener('click', function () {
 })
 
 document.getElementById('modal-btn').addEventListener('click', function () {
-    console.log("hello modal tell me how to clear shopping cart")
+    window.location.href = 'index-fresh.html'
 })
