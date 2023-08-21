@@ -39,30 +39,31 @@
 </head>
 
 <body class="work-sans bg-bg-color">
-    <header class="bg-yellow-50 max-w-full">
-        <!-- banner section -->
-        <div class="hero min-h-min">
-            <div class="hero-content flex-col gap-10 lg:flex-row-reverse w-10/12 justify-around">
-                <img src="./images/Summer 1.png" class="max-w-sm rounded-lg" />
+    <!-- banner section -->
+    <section class="bg-yellow-50 max-w-full">
+        <div class="hero min-h-screen">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <img src="./images/Summer 1.png" class="w-full lg:max-w-lg rounded-lg" />
                 <div class="text-center">
-                    <h4 class="text-1xl font-semibold">---SALE FEVER---</h4>
-                    <h1 class="text-4xl font-bold py-7">Purchase TK 200 or <br> above & get <span
+                    <h4 class="text-2xl font-semibold">---SALE FEVER---</h4>
+                    <h1 class="text-3xl lg:text-5xl font-bold py-7">Purchase TK 200 or <br> above & get <span
                             class="text-common">20% off</span></h1>
                     <div class="flex items-center justify-center gap-2">
-                        <p class="font-medium">Use Promo Code</p>
+                        <p class="font-medium text-lg">Use Promo Code</p>
                         <button class="btn btn-primary border-none text-white bg-common py-2">SELL200</button>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
+
     <main class="max-w-7xl mx-auto">
         <!-- shape container -->
-        <div class="flex flex-col lg:flex-row gap-5 my-16">
+        <div class="flex flex-col lg:flex-row gap-5 my-10">
             <div>
                 <div>
                     <!-- Kitchenware Section -->
-                    <h2 class="text-4xl font-semibold my-10 text-center lg:text-left">Kitchenware</h2>
+                    <h2 class="text-4xl font-semibold my-5 text-center lg:text-left">Kitchenware</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         <!-- product-1 -->
                         <div onclick="selectItemByClick(this)" class="card bg-base-100 shadow-xl w-full">
@@ -129,9 +130,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="my-20">
+                <div class="my-10">
                     <!-- Sportswear Section -->
-                    <h2 class="text-4xl font-semibold my-10 text-center lg:text-left">Sportswear</h2>
+                    <h2 class="text-4xl font-semibold my-5 text-center lg:text-left">Sportswear</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         <!-- product-4 -->
                         <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
@@ -199,8 +200,8 @@
                     </div>
                 </div>
                 <div>
-                    <!-- Kitchenware Section -->
-                    <h2 class="text-4xl font-semibold my-10 text-center lg:text-left">Furniture</h2>
+                    <!-- Furniture Section -->
+                    <h2 class="text-4xl font-semibold my-5 text-center lg:text-left">Furniture</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         <!-- product-7 -->
                         <div onclick="selectItemByClick(this)" class="card w-full bg-base-100 shadow-xl">
@@ -268,21 +269,24 @@
                     </div>
                 </div>
             </div>
-            <div class="mx-auto w-[350px]">
-                <div class="bg-white mt-28 rounded-lg p-5">
+            <div class="mx-auto w-full p-5 lg:w-[350px]">
+                <div class="bg-white mt-20 rounded-lg p-5">
                     <h6 class="font-semibold text-xl">Have coupon?</h6>
                     <div class="join">
-                        <input id="coupon-field" class="input join-item border border-gray-200" placeholder="Coupon code" />
+                        <input id="coupon-field" class="input w-full join-item border border-gray-200"
+                            placeholder="Coupon code" />
                         <button id="apply-btn" class="btn join-item rounded-xl text-white bg-common ">Apply</button>
                     </div>
                 </div>
-                <div class="bg-white p-5 mt-10 rounded-lg">
+                <div class="bg-white p-5 lg:p-2 mt-10 rounded-lg">
                     <div id="selected-items" class="border-b-2">
                     </div>
                     <div class="border-b-2 my-5">
-                        <h6 class="font-semibold text-xl">Total Price: <span id="total-price">00.00</span> <span>TK</span></h6>
-                        <h6 class="font-semibold text-xl">Discount: <span id="discount">00.00 TK</span></h6>
-                        <h6 class="font-semibold text-xl">Total: <span id="total">00.00 TK</span></h6>
+                        <h6 class="font-semibold text-lg">Total Price: <span id="total-price">00.00</span>
+                            <span>TK</span>
+                        </h6>
+                        <h6 class="font-semibold text-lg">Discount: <span id="discount">00.00 TK</span></h6>
+                        <h6 class="font-semibold text-lg">Total: <span id="total">00.00 TK</span></h6>
                     </div>
                     <button onclick="my_modal_5.showModal()" id="purchase-btn"
                         class="w-full btn btn-primary border-none text-white bg-common py-2">Make
@@ -296,7 +300,9 @@
                                 <p class="py-4 px-auto text-center">Your purchase is successfully done</p>
                             </div>
                             <div class="modal-action">
-                                <button id="modal-btn" class="mx-auto px-14 btn btn-primary border-none text-white bg-common py-2">Go Home</button>
+                                <button id="modal-btn"
+                                    class="mx-auto px-14 btn btn-primary border-none text-white bg-common py-2">Go
+                                    Home</button>
                             </div>
                         </form>
                     </dialog>
@@ -306,4 +312,5 @@
     </main>
     <script src="scripts/item-cart.js"></script>
 </body>
+
 </html>
