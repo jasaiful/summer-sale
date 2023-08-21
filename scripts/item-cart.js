@@ -72,5 +72,5 @@ document.getElementById('apply-btn').addEventListener('click', function () {
 })
 
 document.getElementById('modal-btn').addEventListener('click', function () {
-    window.location.href = 'index-fresh.html'
+    window.location.href = 'index.html'
 })
