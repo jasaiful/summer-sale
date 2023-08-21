@@ -26,22 +26,38 @@ function selectItemByClick(target) {
     const totalPurchase = total.toFixed(2);
     document.getElementById('total-price').innerText = totalPurchase;
 
- 
+
 
     // purchase button
     if (total > 0) {
         purchaseButton.disabled = false;
-    } 
-    
-    // apply button
-    if (total >= 200){
-        applyButton.disabled = false;
     }
 
-
-    // console.log(purchaseButton, "Hello");
-
-
+    // apply button
+    if (total >= 200) {
+        applyButton.disabled = false;
+    }
 }
 
 
+document.getElementById('apply-btn').addEventListener('click', function () {
+
+    const discountTextValue = document.getElementById('discount').innerText.split(" ")[0];
+    const previousDiscountValue = parseFloat(discountTextValue);
+    // const discountValue = total * 20 %;
+
+
+    console.log(typeof discountValue, discountValue);
+
+    const inputFieldValue = document.getElementById('coupon-field');
+    const couponCode = inputFieldValue.value;
+
+    if (couponCode === "SELL200") {
+        discountTextValue = discountValue
+    }
+    else {
+        alert('Please try again with a valid coupon code')
+    }
+
+
+})
